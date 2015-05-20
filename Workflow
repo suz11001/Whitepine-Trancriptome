@@ -1,0 +1,27 @@
+To begin, we have :
+  A report file that contains columns:
+    Family
+    Limber Pine (LP)
+    Western White Pine (WWP)
+    Sugar Pine (SP)
+    Whitebark Pine (WBP)
+    Genes
+    Genomes
+    PfamId/PfamCount
+  A gene family file that contains columns:
+    Accession
+    Family Number
+    Number of Genes
+  A fasta file of each species (LP/WWP/SP/WBP)
+  
+The process:
+  Create a fasta file with the family identifier (integer from report$Family)
+  In genefamily, loop through each accession code (genefamily$accession) with that family number (genefamily$FamilyNumber)
+    Read the first 2-3 chars, determine species code, then trim so true accession "c00000_g1_i1" remains
+    Use species code and true accession number to find the relevant sequences
+        Check if sequences are > 150 bp
+    Store sequences in family fasta #include accession code? Not sure
+    After all family files have been read, check to see if one of each family is included
+        # May be able to do this ahead of this step for effeciency, but not sure how/if worth it
+    If all four species are represented, move on to the next family!
+        repeat ad nauseum (2024 times)
