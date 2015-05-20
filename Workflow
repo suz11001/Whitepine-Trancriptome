@@ -21,7 +21,7 @@ The process:
     Use species code and true accession number to find the relevant sequences
         Check if sequences are > 150 bp
     Store sequences in family fasta #include accession code? Not sure
-    After all accession codes have been read, check to see if one of each family is included
+    After all accession codes have been read, check to see if one of each of the four species is included
         # May be able to do this ahead of this step for effeciency, but not sure how/if worth it
     If all four species are represented, move on to the next family!
         repeat ad nauseum (2024 times)
