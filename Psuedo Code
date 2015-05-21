@@ -1,0 +1,13 @@
+load genefamily.txt
+load report.txt
+load LP/WWP/SP/WBP.fasta
+
+for i from 1 to (number of families){
+    create familyNumber.fasta
+    create SpeciesList
+        for j from 1 to (number of accessions matching family i){
+            trim speciesCode from accession number j
+            if speciesCode is not in speciesList, add it
+            search through SpeciesCode.fasta with remainder of accession number
+            if number of base pairs > 150, add accession number and sequence to familyNumber.fasta
+    if SpeciesList < 4, delete familyNumber.fasta
